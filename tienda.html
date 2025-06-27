@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GAMER_CODE - TIENDA</title>
+  <link rel="icon" href="Img_logo/IMG_LOGO/logo2.jpg" type="image/x-icon" />
+
+  <style>
+    :root {
+      --color1: #000000;
+      --color2: #101414;
+      --color3: #3a4450;
+      --color4: #74848f;
+      --color5: #b1bad6;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--color1);
+      color: var(--color5);
+    }
+
+    header.top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--color2);
+      color: var(--color5);
+      padding: 1em;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+      border-radius: 8px;
+      transition: 0.5s;
+    }
+
+    .logo:hover {
+      border-radius: 15px;
+      box-shadow: 3px 3px 3px var(--color4);
+    }
+
+    .title {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 1.8em;
+      color: var(--color5);
+      transition: 1s;
+    }
+
+    .title:hover {
+      cursor: default;
+      text-shadow: 1px 1px var(--color4);
+    }
+
+    .main-content {
+      padding: 2em;
+    }
+
+    section {
+      margin-bottom: 3em;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      color: var(--color5);
+    }
+
+    hr {
+      border: 1px solid var(--color4);
+      margin: 1em 0;
+    }
+
+    p {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    iframe {
+      max-width: 100%;
+      margin-top: 0.5em;
+      border-radius: 8px;
+    }
+
+    figure {
+      margin: 1em 0;
+      text-align: center;
+    }
+
+    figure img {
+      border-radius: 10px;
+      margin: 0.5em;
+    }
+
+    .buy-section {
+      text-align: center;
+      margin-top: 1.5em;
+    }
+
+    .buy-section label {
+      font-weight: bold;
+      color: var(--color4);
+      margin-top: 1em;
+      display: block;
+    }
+
+    .buy-section select {
+      background-color: var(--color3);
+      color: var(--color5);
+      border: none;
+      padding: 0.5em;
+      border-radius: 5px;
+      margin: 0.5em;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .buy-button {
+      background-color: var(--color4);
+      color: var(--color1);
+      padding: 0.7em 1.5em;
+      margin-top: 1em;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buy-button:hover {
+      background-color: var(--color5);
+      color: var(--color2);
+      box-shadow: 0 0 10px var(--color4);
+    }
+
+a {
+  text-decoration: none;
+  color: #b1bad6;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 19px;
+  border-radius: 10px;
+  background-color: #3a4450;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+a:hover {
+  border: 2px solid aquamarine;
+  background-color: #4a5360;
+  border-radius: 16px;
+  color: aquamarine;
+}
+
+  </style>
+</head>
+
+<body>
+  <header class="top-header">
+    <img src="Img_logo/IMG_LOGO/logo2.jpg" alt="Logo" class="logo" />
+    <div class="title">GAMER_CODE - TIENDA</div>
+    <a href="Gamer_code.html">INICIO</a>
+  </header>
+
+  <div class="main-content">
+    <section>
+      <h1>COMPRAS</h1>
+      <hr>
+
+      <p>GRAND THEFT AUTO</p>
+      <figure>
+        <iframe height="315" src="https://www.youtube.com/embed/QFL_BV6Tyes?si=yaVcAr4P3P9hfqQy" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </figure>
+      <figure>
+        <img src="/Img_logo/IMG_JUEGOS/GTA_PRIMCIPAL.webp" alt="GTA5 - IMG1" width="40%" />
+      </figure>
+      <figure>
+        <img src="/Img_logo/IMG_JUEGOS/GTA_PERSONAGES.jpg" alt="GTA5 - IMG2" width="30%" />
+        <img src="/Img_logo/IMG_JUEGOS/GTA_CIUDAD.webp" alt="GTA5 - IMG3" width="30%" />
+      </figure>
+
+      <div class="buy-section">
+        <label for="comprar1">COMPRAR PARA</label>
+        <select name="comprar1" id="comprar1">
+          <option value="XB">XBOX</option>
+          <option value="PL">PLAY STATION</option>
+          <option value="PC">PC</option>
+        </select>
+
+        <label for="precio1">PRECIOS POR REGIÓN</label>
+        <select name="precio1" id="precio1">
+          <option value="COP">COP$119,000</option>
+          <option value="USD">US$49.00</option>
+        </select>
+
+        <button class="buy-button" onclick="alert('Función de compra aún no implementada. Pronto podrás pagar con medios colombianos.')">
+          COMPRAR AHORA
+        </button>
+      </div>
+      <hr>
+    </section>
+
+    <section>
+      <p>CALL OF DUTY BLACK OPS 6</p>
+      <figure>
+        <iframe height="315" src="https://www.youtube.com/embed/K7wW6V0OiIU?si=LquoDCykVl5Y6Lyt" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </figure>
+      <figure>
+        <img src="/Img_logo/IMG_JUEGOS/CALL_PRIMCIAL.webp" alt="COD BLACK OPS6 - IMG1" width="40%" />
+      </figure>
+      <figure>
+        <img src="/Img_logo/IMG_JUEGOS/CALL_PERSONAJES.jpg" alt="COD BLACK OPS6 - IMG2" width="30%" />
+        <img src="/Img_logo/IMG_JUEGOS/CAL_ESENARIO.avif" alt="COD BLACK OPS6 - IMG3" width="30%" />
+      </figure>
+
+      <div class="buy-section">
+        <label for="comprar2">COMPRAR PARA</label>
+        <select name="comprar2" id="comprar2">
+          <option value="XB">XBOX</option>
+          <option value="PL">PLAY STATION</option>
+          <option value="PC">PC</option>
+        </select>
+
+        <label for="precio2">PRECIOS POR REGIÓN</label>
+        <select name="precio2" id="precio2">
+          <option value="COP">COP$176,000</option>
+          <option value="USD">US$69.99</option>
+        </select>
+
+        <button class="buy-button" onclick="alert('Función de compra aún no implementada. Pronto podrás pagar con medios colombianos.')">
+          COMPRAR AHORA
+        </button>
+      </div>
+      <hr>
+    </section>
+
+    <section>
+      <p>GOD OF WAR</p>
+      <figure>
+        <iframe height="315" src="https://www.youtube.com/embed/dK42JGgkoF8?si=76IC1j30x5LIG7tr" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </figure>
+      <figure>
+        <img src="/Img_logo/IMG_JUEGOS/GOD_PRIMCIPLA.avif" alt="GOD OF WAR - IMG1" width="30%" />
+        <img src="/Img_logo/IMG_JUEGOS/GOD_ESENARIO.webp" alt="GOD OF WAR - IMG2" width="30%" />
+        <img src="/Img_logo/IMG_JUEGOS/GOD_CUIDAD.jpg" alt="GOD OF WAR - IMG3" width="30%" />
+      </figure>
+
+      <div class="buy-section">
+        <label for="comprar3">COMPRAR PARA</label>
+        <select name="comprar3" id="comprar3">
+          <option value="XB">XBOX</option>
+          <option value="PL">PLAY STATION</option>
+          <option value="PC">PC</option>
+        </select>
+
+        <label for="precio3">PRECIOS POR REGIÓN</label>
+        <select name="precio3" id="precio3">
+          <option value="COP">COP$184,000</option>
+          <option value="USD">US$49.99</option>
+        </select>
+
+        <button class="buy-button" onclick="alert('Función de compra aún no implementada. Pronto podrás pagar con medios colombianos.')">
+          COMPRAR AHORA
+        </button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

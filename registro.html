@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAMER_CODE - REGÍSTRATE</title>
+  <link rel="icon" href="/Img_logo/IMG_LOGO/logo2.jpg" type="image/x-icon" />
+  <style>
+    :root {
+      --color1: #000000;
+      --color2: #101414;
+      --color3: #3a4450;
+      --color4: #74848f;
+      --color5: #b1bad6;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--color1);
+      color: var(--color5);
+    }
+
+    header.top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--color2);
+      color: var(--color5);
+      padding: 1em;
+    }
+
+    .logo {
+      width: 60px;
+      border-radius: 8px;
+      transition: 0.5s;
+    }
+
+    .logo:hover {
+      border-radius: 15px;
+      box-shadow: 3px 3px 3px var(--color4);
+    }
+
+    .title {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 1.8em;
+      color: var(--color5);
+      transition: 1s;
+    }
+
+    .title:hover {
+      cursor: default;
+      text-shadow: 1px 1px var(--color4);
+    }
+
+    .main-content {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: var(--color2);
+      padding: 1em;
+      color: var(--color5);
+      height: 100vh;
+    }
+
+    .sidebar button {
+      display: block;
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      font-size: 1em;
+      background-color: var(--color3);
+      color: var(--color5);
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.5s;
+    }
+
+    .sidebar button:hover {
+      background-color: var(--color4);
+      border-radius: 15px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: var(--color5);
+    }
+
+    .form-area {
+      flex-grow: 1;
+      padding: 2em;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--color5);
+    }
+
+    form {
+      background-color: var(--color2);
+      padding: 2em;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px var(--color3);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: var(--color4);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background-color: var(--color3);
+      border: 1px solid var(--color4);
+      color: var(--color5);
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: 0.3s ease-in-out;
+    }
+
+    input[type="submit"] {
+      background-color: var(--color5);
+      color: var(--color1);
+    }
+
+    input[type="reset"] {
+      background-color: #f44336;
+      color: white;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #a0b3e0;
+    }
+
+    input[type="reset"]:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-header">
+    <img class="logo" src="/Img_logo/IMG_LOGO/logo2.jpg" alt="Logo">
+    <div class="title">GAMER_CODE</div>
+  </header>
+
+  <div class="main-content">
+    <aside class="sidebar">
+      <button><a href="/Gamer_code.html">INICIO</a></button>
+      <button><a href="/tienda.html">TIENDA</a></button>
+      <button><a href="#">ESTRENOS</a></button>
+    </aside>
+
+    <div class="form-area">
+      <h2>FORMULARIO DE REGISTRO</h2>
+      <form action="/registro.html" method="get">
+        <label for="nombre">NOMBRE Y APELLIDOS</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="40">
+
+        <label for="fecha">FECHA DE NACIMIENTO</label>
+        <input type="date" id="fecha" name="fecha">
+
+        <label for="pais">PAÍS DE ORIGEN</label>
+        <select name="pais" id="pais">
+          <option value="co">Colombia</option>
+          <option value="ve">Venezuela</option>
+          <option value="es">España</option>
+          <option value="ar">Argentina</option>
+          <option value="po">Portugal</option>
+          <option value="al">Alemania</option>
+        </select>
+
+        <label for="email">CORREO ELECTRÓNICO</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">CONTRASEÑA (mínimo 8 caracteres)</label>
+        <input type="password" id="password" name="password" required minlength="8">
+
+        <label for="tel">CELULAR (formato: 123-456-7890)</label>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+
+        <input type="submit" value="ENVIAR">
+        <input type="reset" value="BORRAR">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

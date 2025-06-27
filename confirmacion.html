@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pago Exitoso</title>
+  <style>
+    :root {
+      --color1: #000000;
+      --color2: #101414;
+      --color3: #3a4450;
+      --color4: #74848f;
+      --color5: #b1bad6;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--color1);
+      color: var(--color5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .checkmark {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 5px solid var(--color4);
+      position: relative;
+      animation: pop 0.4s ease-out forwards;
+      margin-bottom: 20px;
+    }
+
+    .checkmark::after {
+      content: '';
+      position: absolute;
+      left: 26px;
+      top: 10px;
+      width: 25px;
+      height: 50px;
+      border-right: 5px solid #3ce273;
+      border-bottom: 5px solid #3ce273;
+      transform: rotate(45deg);
+      animation: draw 0.6s ease-out forwards;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes draw {
+      from { height: 0; width: 0; }
+      to { height: 50px; width: 25px; }
+    }
+
+    .success-gif {
+      width: 180px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: var(--color5);
+    }
+
+    p {
+      font-size: 1.2em;
+      color: var(--color4);
+    }
+
+    .actions {
+      margin-top: 30px;
+    }
+
+    .actions a, .actions button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: var(--color3);
+      color: var(--color5);
+      text-decoration: none;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    .actions a:hover, .actions button:hover {
+      background-color: var(--color4);
+    }
+  </style>
+</head>
+<body>
+  <audio id="success-sound" autoplay>
+    <source src="/sound/preview.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="checkmark"></div>
+
+  <img class="success-gif" src="https://media.giphy.com/media/4T7e4DmcrP9du/giphy.gif" alt="Éxito"/>
+
+  <h1>¡Pago exitoso!</h1>
+  <p>Tu transacción ha sido procesada correctamente.</p>
+
+  <div class="actions">
+    <a href="tienda.html">Volver a la tienda</a>
+    <button onclick="descargarComprobante()">Descargar comprobante</button>
+  </div>
+
+  <script>
+    function descargarComprobante() {
+      const contenido = `
+        COMPROBANTE DE PAGO SIMULADO
+
+        Fecha: ${new Date().toLocaleString()}
+        Cliente: Usuario prueba
+        Monto: COP$120.000
+        Método: Simulado
+
+        Gracias por tu compra.
+      `;
+      const blob = new Blob([contenido], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = "comprobante_pago.txt";
+      link.click();
+    }
+  </script>
+</body>
+</html>
