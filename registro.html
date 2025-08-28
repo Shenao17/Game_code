@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAMER_CODE - REGÍSTRATE</title>
+  <link rel="icon" href="/Img_logo/IMG_LOGO/logo2.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
+  crossorigin="anonymous">
+</head>
+<body>
+
+  <header class="top-header">
+    <img class="logo" src="/Img_logo/IMG_LOGO/logo2.png" alt="Logo">
+    <div class="title">GAMER_CODE</div>
+  </header>
+
+  <div class="main-content">
+    <aside class="sidebar">
+      <button><a href="./index.html">INICIO</a></button>
+      <button><a href="/tienda.html">TIENDA</a></button>
+      <button><a href="./index.html">ESTRENOS</a></button>
+    </aside>
+
+    <div class="form-area">
+      <h2>FORMULARIO DE REGISTRO</h2>
+      <form action="/registro.html" method="get">
+        <label for="nombre">NOMBRE Y APELLIDOS</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="40">
+
+        <label for="fecha">FECHA DE NACIMIENTO</label>
+        <input type="date" id="fecha" name="fecha">
+
+        <label for="pais">PAÍS DE ORIGEN</label>
+        <select name="pais" id="pais">
+          <option value="co">Colombia</option>
+          <option value="ve">Venezuela</option>
+          <option value="es">España</option>
+          <option value="ar">Argentina</option>
+          <option value="po">Portugal</option>
+          <option value="al">Alemania</option>
+        </select>
+
+        <label for="email">CORREO ELECTRÓNICO</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">CONTRASEÑA (mínimo 8 caracteres)</label>
+        <input type="password" id="password" name="password" required minlength="8">
+
+        <label for="tel">CELULAR (formato: 123-456-7890)</label>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+
+        <input type="submit" value="ENVIAR">
+        <input type="reset" value="BORRAR">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

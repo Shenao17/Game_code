@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/Img_logo/IMG_LOGO/logo2.png" type="image/x-icon">
+  <title>GAMER CODE</title>
+  
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
+    crossorigin="anonymous"
+  >
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Para que el footer siempre esté al fondo */
+    }
+
+    .main-content {
+      flex: 1; /* Ocupa todo el espacio disponible, empuja el footer abajo */
+    }
+
+    button {
+      background-color: var(--color3);
+      color: var(--color5);
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 12px; 
+    }
+
+    button:hover {
+      background-color: var(--color4);
+      color: var(--color2);
+    }
+
+    .ESTRENOS {
+      margin-left: 500px;
+      margin-top: 20px;
+      margin-bottom: 400px;
+      margin-right: 330px;
+    }
+
+    footer {
+      background-color: var(--color2);
+      color: var(--color5);
+      padding: 30px 20px;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: var(--color5);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--color4);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-header d-flex align-items-center p-3">
+    <img class="logo me-3" src="/Img_logo/IMG_LOGO/logo2.png" alt="Logo" width="60">
+    <div class="title">
+      <h2 class="m-0">GAMER.CODE</h2>
+      <p class="m-0">MEDELLIN</p>
+    </div>
+  </header>
+  
+  <div class="main-content d-flex">
+    
+    <aside class="sidebar p-3">
+      <button><a href="/registro.html">REGÍSTRATE</a></button>
+      <button><a href="#USUARIO">USUARIO</a></button>
+      <button><a href="#ESTRENOS">ESTRENOS</a></button>
+      <button><a href="/tienda.html">TIENDA</a></button>
+      <hr>  
+      <div>
+        <p>JUEGOS</p>
+        <button>BIBLIOTECA</button>
+        <button>COMUNIDAD</button>
+        <button>AMIGOS</button>
+        <button>AYUDA</button>
+      </div>
+    </aside>
+
+<div class="main-content d-flex flex-column align-items-center text-center py-5">
+  <h1 class="proximos">Próximos Estrenos</h1>
+
+  <div class="w-75 mt-4">
+    <div class="mb-4">
+      <h2 style="color: cadetblue;">Hollow Knight: Silksong</h2>
+      <p>El tan esperado sucesor de Hollow Knight llegará el 4 de septiembre tras años de desarrollo, preparado para conquistar corazones con su acción impecable y su arte único.</p>
+    </div>
+<hr>
+    <div class="mb-4">
+      <h2 style="color: brown;">Metal Gear Solid Δ: Snake Eater</h2>
+      <p>Remake del clásico Metal Gear Solid 3, promete traer una experiencia inmersiva, sigilosa y con gráficos renovados, muy esperado este <b>28 de agosto.</b> </p>
+    </div>
+    <hr>
+    <div class="mb-4">
+      <h2 style="color: crimson;">Death Stranding 2: On The Beach</h2>
+      <p>Sam vuelve en esta secuela épica cargada de conexión humana y paisajes impactantes, programada para junio de <b>2025</b> en PS5. </p>
+    </div>
+<hr>
+    <div class="mb-4">
+      <h2 style="color: cadetblue;">Ghost of Yōtei</h2>
+      <p>Secuela de Ghost of Tsushima ambientada en las tundras nevadas alrededor del monte Yōtei, una aventura cargada de historia y paisajes helados</p>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row text-center text-md-start">
+        
+        <div class="col-md-4 mb-3">
+          <h5>REDES SOCIALES</h5>
+          <ul class="list-unstyled">
+            <li><a href="#INSTAGRAM">INSTAGRAM</a></li>
+            <li><a href="#WHATSAPP">WHATSAPP</a></li>
+            <li><a href="#FACEBOOK">FACEBOOK</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h5>TELÉFONOS</h5>
+          <ul class="list-unstyled">
+            <li><a href="#NUMERO">+57 323 868 6892</a></li>
+            <li><a href="#NUMERO">+57 302 387 6861</a></li>
+            <li><a href="#NUMERO">+57 300 825 3710</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h5>DIRECCIÓN</h5>
+          <ul class="list-unstyled">
+            <li><a href="#DIRECCION">COLOMBIA</a></li>
+            <li><a href="#DIRECCION">ANTIOQUIA, MEDELLÍN</a></li>
+            <li><a href="#DIRECCION">CALLE 64 # 118 C56</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center m-0">© 2025 GAMER CODE - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+</body>
+</html>
