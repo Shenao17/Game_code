@@ -370,3 +370,124 @@ iframe {
   border-radius: 16px;
   color: aquamarine;
 }
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 160px;
+    font-size: 0.9em;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .proximos {
+    font-size: 2em;
+  }
+
+  .form-area {
+    padding: 1em;
+  }
+}
+
+/* ----- Pantallas pequeñas----- */
+@media (max-width: 768px) {
+  header.top-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 65px;
+    margin-bottom: 0.5em;
+  }
+
+  .title {
+    font-size: 1.3em;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar button {
+    width: 45%;
+    margin: 0.5em;
+  }
+
+  .content-area,
+  .form-area {
+    padding: 1em;
+  }
+
+  form {
+    padding: 1.5em;
+    width: 95%;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    width: 48%;
+    margin: 0.5em 1%;
+  }
+
+  .video-section {
+    margin: 2em auto;
+    width: 100%;
+  }
+
+  .video-container {
+    border-radius: 5px;
+  }
+
+  .buy-section select {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .buy-button {
+    width: 100%;
+  }
+}
+
+/* ----- Extra pequeño (menos de 480px) ----- */
+@media (max-width: 480px) {
+  .sidebar button {
+    width: 100%;
+  }
+
+  .proximos {
+    font-size: 1.5em;
+  }
+
+  .title {
+    font-size: 1.1em;
+  }
+
+  form {
+    padding: 1em;
+  }
+
+  label {
+    font-size: 0.9em;
+  }
+
+  input,
+  select {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  iframe {
+    border-radius: 5px;
+  }
+}
+
