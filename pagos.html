@@ -141,6 +141,56 @@
       vertical-align: middle;
       filter: brightness(100);
     }
+
+@media (max-width: 992px) { /* Tablets y móviles */
+  .payment-container {
+    flex-direction: column;
+  }
+
+  .payment-options {
+    border-right: none;
+    border-bottom: 2px solid var(--color4);
+  }
+
+  .payment-options button {
+    width: 100%;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .secure-icons img {
+    width: 45px; /* achicar logos en móviles */
+    margin-bottom: 0.5em;
+  }
+}
+
+@media (max-width: 576px) { /* Teléfonos pequeños */
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header img {
+    width: 40px;
+  }
+
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  .payment-options h2, 
+  .payment-form h2 {
+    font-size: 1.1em;
+  }
+
+  input, select, button {
+    font-size: 0.9em;
+    padding: 0.6em;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -209,7 +259,7 @@
     function redirigirConfirmacion(e) {
       e.preventDefault();
       window.location.href = "confirmacion.html";
-    }
+    } 
   </script>
 
 </body>
